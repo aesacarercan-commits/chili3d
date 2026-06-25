@@ -1,0 +1,249 @@
+/**
+ * Constraint Panel Styles
+ * Styling for the constraint input and solver UI component
+ */
+
+.constraint-panel {
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.constraint-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #e8e8e8;
+  border-bottom: 1px solid #ccc;
+}
+
+.constraint-panel-header h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.collapse-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.collapse-btn:hover {
+  color: #333;
+}
+
+.constraint-panel-content {
+  padding: 12px;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.constraint-section {
+  margin-bottom: 16px;
+}
+
+.constraint-section:last-child {
+  margin-bottom: 0;
+}
+
+.constraint-section h4 {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.constraint-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.constraint-btn {
+  padding: 6px;
+  background: white;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  transition: all 0.2s;
+  color: #333;
+}
+
+.constraint-btn:hover:not(.disabled) {
+  background: #e3f2fd;
+  border-color: #2196f3;
+  color: #1976d2;
+}
+
+.constraint-btn:active:not(.disabled) {
+  background: #bbdefb;
+  border-color: #1976d2;
+}
+
+.constraint-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f0f0f0;
+}
+
+.constraint-btn .icon {
+  display: block;
+  font-size: 14px;
+}
+
+.solver-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.solve-btn,
+.clear-btn {
+  flex: 1;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.solve-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.solve-btn:hover {
+  background: #45a049;
+}
+
+.solve-btn:active {
+  background: #3d8b40;
+}
+
+.clear-btn {
+  background: #ff9800;
+  color: white;
+}
+
+.clear-btn:hover {
+  background: #e68900;
+}
+
+.clear-btn:active {
+  background: #cc7700;
+}
+
+.constraint-info {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #ddd;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+}
+
+.stat label {
+  font-size: 10px;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.stat span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.status {
+  padding: 6px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  display: none;
+  animation: slideIn 0.2s ease-out;
+}
+
+.status-success {
+  background: #c8e6c9;
+  color: #2e7d32;
+  border: 1px solid #81c784;
+}
+
+.status-error {
+  background: #ffcdd2;
+  color: #c62828;
+  border: 1px solid #e57373;
+}
+
+.status-info {
+  background: #bbdefb;
+  color: #1565c0;
+  border: 1px solid #64b5f6;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .constraint-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .constraint-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
