@@ -1,0 +1,14 @@
+{
+  "name": "@chili3d/solvespace",
+  "version": "0.7.0-beta",
+  "description": "SolveSpace geometric constraint solver integration for Chili3D",
+  "main": "src/index.ts",
+  "type": "module",
+  "dependencies": {
+    "slvs": "^0.0.0"
+  },
+  "devDependencies": {
+    "@chili3d/core": "*",
+    "typescript": "^6.0.3"
+  }
+}
