@@ -2,20 +2,25 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: var(--titlebar-background-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .split {
     width: 1px;
     height: 14px;
     margin: 0px 8px;
-    background-color: rgba(128, 128, 128, 0.45);
+    background-color: var(--border-color);
 }
 
 .titleBar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 2px 4px;
+    margin: 0px;
+    padding: 4px 8px;
+    background-color: var(--titlebar-background-color);
+    min-height: 48px;
 
     .left {
         display: flex;
@@ -225,6 +230,8 @@
     background-color: var(--panel-background-color);
     border-bottom: 1px solid var(--border-color);
     overflow-x: auto;
+    padding: 4px 8px;
+    min-height: 96px;
 
     &::-webkit-scrollbar {
         height: 6px;
@@ -238,6 +245,8 @@
     & .groupPanel {
         display: flex;
         flex-direction: row;
+        gap: 8px;
+        padding: 0px 4px;
     }
 }
 

@@ -1,13 +1,16 @@
 .panel {
-    margin: 4px;
+    margin: 0;
+    padding: 4px;
 }
 
 .selected {
-    background-color: var(--hover-background-color);
+    background-color: var(--checked-color);
+    border-left: 3px solid var(--primary-color);
 }
 
 .current {
     outline: 2px solid var(--primary-color);
+    outline-offset: -2px;
 }
 
 .dragging {
@@ -17,5 +20,6 @@
 
 .dropTarget {
     outline: 2px solid var(--primary-color);
+    outline-offset: -2px;
     opacity: 0.8;
 }
