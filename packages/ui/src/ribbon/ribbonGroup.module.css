@@ -1,9 +1,12 @@
 .ribbonGroup {
     position: relative;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     flex-shrink: 0;
+    padding: 4px 8px;
+    min-width: 64px;
 
     .headerContainer {
         display: flex;
@@ -13,10 +16,13 @@
         justify-content: center;
         padding: 1px;
         position: relative;
+        margin-top: auto;
 
         .header {
-            color: var(--foreground-color);
-            font-size: 12px;
+            color: var(--foreground-secondary-color);
+            font-size: 11px;
+            text-align: center;
+            font-weight: 500;
         }
 
         .arrow {
@@ -47,24 +53,25 @@
     }
 
     .content {
-        height: 72px;
+        height: 64px;
         flex-shrink: 0;
         display: flex;
         flex-direction: row;
-        align-items: stretch;
-        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
         overflow: hidden;
-        padding: 2px 0;
+        padding: 4px;
     }
 }
 
 .ribbonGroup::after {
     content: "";
     position: absolute;
-    display: grid;
+    display: block;
     right: 0px;
-    top: 6px;
-    bottom: 6px;
+    top: 8px;
+    bottom: 24px;
     width: 1px;
     background-color: var(--border-color);
 }

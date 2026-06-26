@@ -4,21 +4,29 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 8px;
+    padding: 0 12px;
+    min-height: 28px;
+    font-size: 12px;
 }
 
 .left {
     flex: 1;
+    display: flex;
+    align-items: center;
 
     .tip {
         font-size: 12px;
         margin: 4px 8px;
         color: var(--statusbar-foreground-color);
+        font-weight: 500;
     }
 }
 
 .right {
     flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 @media (max-width: 680px) {

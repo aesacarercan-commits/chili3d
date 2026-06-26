@@ -17,16 +17,18 @@
     & .sidebar {
         display: flex;
         flex-direction: column;
-        min-width: 150px;
+        min-width: 200px;
         max-width: 85%;
-        background-color: var(--background-color);
+        background-color: var(--panel-background-color);
         position: relative;
+        border-right: 1px solid var(--border-color);
 
         & .sidebarItem {
-            margin-top: 10px;
+            margin-top: 0;
             overflow: hidden;
             flex: 1 1 auto;
             height: 0;
+            border-bottom: 1px solid var(--border-color);
         }
     }
 
@@ -44,22 +46,23 @@
 }
 
 .sidebarResizer {
-    width: 6px;
+    width: 4px;
     cursor: ew-resize;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     z-index: 10;
-    background: var(--resizer-gradient);
+    background: transparent;
     transition: background 0.2s;
 }
 .sidebarResizer:hover {
-    background: var(--resizer-gradient-hover);
+    background: var(--primary-color);
+    opacity: 0.5;
 }
 
 .statusbar {
-    height: 24px;
+    height: 28px;
     display: flex;
     flex-direction: column;
 }
